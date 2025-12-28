@@ -67,11 +67,11 @@
 
 .home_lsj .right_lsj img {
     max-width: 100%;
-    animation: floatY 4s ease-in-out infinite;
+    animation: floatY_lsj 4s ease-in-out infinite;
 }
 
 
-@keyframes floatY {
+@keyframes floatY_lsj {
 
     0%,
     100% {
