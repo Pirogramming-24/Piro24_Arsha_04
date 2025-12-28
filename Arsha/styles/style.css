@@ -215,15 +215,26 @@
     border-radius: 5px;
 }
 
+.about_top_lsj .bottom_lsj .right_lsj a span {
+    display: inline-block;
+    transition: transform 0.4s ease;
+}
+
 .about_top_lsj .bottom_lsj .right_lsj a:hover {
     background-color: #47B2E4;
     color: #fff;
     transition: background-color 0.4s ease;
 }
 
+.about_top_lsj .bottom_lsj .right_lsj a:hover span {
+    transform: translateX(5px);
+}
+
 
 /* ABOUT US - MIDDLE */
-.about_middle_lsj {}
+.about_middle_lsj {
+    background-color: #f5f6f8;
+}
 
 .about_middle_lsj .left_lsj {}
 
