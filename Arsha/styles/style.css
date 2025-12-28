@@ -1,0 +1,244 @@
+/* HOME */
+.home_lsj {
+    width: 100%;
+    margin: auto;
+    padding: 100px;
+    display: flex;
+    background-color: #37517E;
+    /* 가로 중앙 */
+    align-items: center;
+    /* 세로 중앙 */
+    justify-content: center;
+    color: #fff;
+}
+
+.home_lsj .left_lsj {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.home_lsj .left_lsj h1 {
+    line-height: 1.2;
+    margin: 0;
+    padding: 0%;
+    font-size: 48px;
+    font-weight: 1000;
+}
+
+.home_lsj .left_lsj p {
+    font-size: 22px;
+    font-weight: 600;
+    color: #c5c5c5;
+}
+
+.home_lsj .left_lsj .bottom_lsj {
+    padding: 10px 0;
+    width: 280px;
+}
+
+.home_lsj .left_lsj .startBtn_lsj {
+    display: inline;
+    font-size: 15px;
+    padding: 10px 28px 12px;
+    border-radius: 20px;
+    background-color: #47B2E4;
+    font-weight: 500;
+    transition: background-color 0.4s ease;
+}
+
+.home_lsj .left_lsj .startBtn_lsj:hover {
+    background-color: #47b2e4d3;
+}
+
+.home_lsj .left_lsj .videoBtn_lsj {
+    padding: 20px;
+    transition: color 0.4s ease;
+    font-size: 16px;
+}
+
+.home_lsj .left_lsj .videoBtn_lsj:hover {
+    color: #47B2E4;
+}
+
+.home_lsj .right_lsj {
+    padding: 30px;
+}
+
+.home_lsj .right_lsj img {
+    max-width: 100%;
+    animation: floatY_lsj 4s ease-in-out infinite;
+}
+
+
+@keyframes floatY_lsj {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .home_lsj {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 380px) {
+    .home_lsj .left_lsj h1 {
+        font-size: 28px;
+    }
+
+    .home_lsj .left_lsj p {
+        font-size: 18px;
+    }
+
+    .home_lsj .left_lsj .startBtn_lsj {
+        font-size: 13px;
+    }
+
+    .home_lsj .left_lsj .videoBtn_lsj {
+        font-size: 13px;
+    }
+}
+
+
+/* LOGO SLIDE */
+.slide_frame_lsj {}
+
+.slide_frame_lsj .slide_lsj {}
+
+.slide_frame_lsj .slide_lsj img {}
+
+
+/* ABOUT US - TOP */
+.about_top_lsj {}
+
+.about_top_lsj .top_lsj {}
+
+.about_top_lsj .top_lsj h2 {}
+
+.about_top_lsj .left_lsj {}
+
+.about_top_lsj .left_lsj p {}
+
+.about_top_lsj .left_lsj span {}
+
+.about_top_lsj .right_lsj {}
+
+.about_top_lsj .right_lsj p {}
+
+.about_top_lsj .right_lsj a {}
+
+
+/* ABOUT US - MIDDLE */
+.about_middle_lsj {}
+
+.about_middle_lsj .left_lsj {}
+
+.about_middle_lsj .left_lsj .top_lsj {}
+
+.about_middle_lsj .left_lsj .top_lsj h3 {}
+
+.about_middle_lsj .left_lsj .top_lsj h3 span {}
+
+.about_middle_lsj .left_lsj .top_lsj h3 strong {}
+
+.about_middle_lsj .left_lsj .top_lsj p {}
+
+.about_middle_lsj .left_lsj .bottom_lsj {}
+
+.about_middle_lsj .left_lsj .item_lsj {}
+
+.about_middle_lsj .left_lsj .item_lsj span {}
+
+.about_middle_lsj .right_lsj {}
+
+.about_middle_lsj .right_lsj img {}
+
+
+/* ABOUT US - BOTTOM */
+.about_bottom_lsj {}
+
+.about_bottom_lsj .left_lsj {}
+
+.about_bottom_lsj .left_lsj img {}
+
+.about_bottom_lsj .right_lsj {}
+
+.about_bottom_lsj .right_lsj h3 {}
+
+.about_bottom_lsj .right_lsj p {}
+
+.about_bottom_lsj .right_lsj .progress_lsj {}
+
+.about_bottom_lsj .right_lsj .box_lsj {}
+
+.about_bottom_lsj .right_lsj .box_lsj span {}
+
+
+/* SERVICES */
+.service_lsj {}
+
+.service_lsj .top_lsj {}
+
+.service_lsj .top_lsj h2 {}
+
+.service_lsj .top_lsj p {}
+
+.service_lsj .bottom_lsj {}
+
+.service_lsj .bottom_lsj .item_lsj {}
+
+.service_lsj .bottom_lsj .item_lsj img {}
+
+.service_lsj .bottom_lsj .item_lsj h4 {}
+
+.service_lsj .bottom_lsj .item_lsj p {}
+
+
+/* WORK PROCESS */
+.work_process_lsj {}
+
+.work_process_lsj .top_lsj {}
+
+.work_process_lsj .top_lsj h2 {}
+
+.work_process_lsj .top_lsj p {}
+
+.work_process_lsj .bottom_lsj {}
+
+.work_process_lsj .bottom_lsj .item_lsj {}
+
+.work_process_lsj .bottom_lsj .item_lsj img {}
+
+.work_process_lsj .bottom_lsj .content_lsj {}
+
+.work_process_lsj .bottom_lsj .number_lsj {}
+
+.work_process_lsj .bottom_lsj h3 {}
+
+.work_process_lsj .bottom_lsj p {}
+
+.work_process_lsj .bottom_lsj .list_lsj {}
+
+.work_process_lsj .bottom_lsj .list_lsj img {}
+
+.work_process_lsj .bottom_lsj .list_lsj span {}
+
+
+/* CALL TO ACTION */
+.call_to_action_lsj {}
+
+.call_to_action_lsj h3 {}
+
+.call_to_action_lsj p {}
+
+.call_to_action_lsj a {}
