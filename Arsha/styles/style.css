@@ -234,29 +234,95 @@
 /* ABOUT US - MIDDLE */
 .about_middle_lsj {
     background-color: #f5f6f8;
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.about_middle_lsj .left_lsj {}
+.about_middle_lsj .left_lsj {
+    padding: 0 12px;
+    margin: 24px 0 0;
+    display: flex;
+    flex-direction: column;
+}
 
-.about_middle_lsj .left_lsj .top_lsj {}
+.about_middle_lsj .left_lsj .top_lsj {
+    color: #37517E;
+    padding: 0 48px;
+}
 
-.about_middle_lsj .left_lsj .top_lsj h3 {}
+.about_middle_lsj .left_lsj .top_lsj h3 {
+    margin: 0 0 8px;
+    font-size: 34px;
+}
 
 .about_middle_lsj .left_lsj .top_lsj h3 span {}
 
 .about_middle_lsj .left_lsj .top_lsj h3 strong {}
 
-.about_middle_lsj .left_lsj .top_lsj p {}
+.about_middle_lsj .left_lsj .top_lsj p {
+    margin: 0 0 16px;
+    color: #3033337e;
+    font-size: 16px;
+}
 
-.about_middle_lsj .left_lsj .bottom_lsj {}
+.about_middle_lsj .left_lsj .bottom_lsj {
+    padding: 0 48px;
+}
 
-.about_middle_lsj .left_lsj .item_lsj {}
+.about_middle_lsj .left_lsj .item_lsj {
+    background-color: #fff;
+    margin: 0 0 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
 
 .about_middle_lsj .left_lsj .item_lsj span {}
 
-.about_middle_lsj .right_lsj {}
+.about_middle_lsj .left_lsj .item_lsj span:hover {
+    cursor: pointer;
+}
 
-.about_middle_lsj .right_lsj img {}
+.about_middle_lsj .left_lsj .item_lsj span:nth-child(1) {
+    color: #47B2E4;
+    padding: 0 5px 0 0;
+    font-size: 17px;
+}
+
+.about_middle_lsj .left_lsj .item_lsj span:nth-child(2) {
+    color: #37517E;
+    margin: 0 30px 0 0;
+    font-size: 17px;
+    transition: transform 0.4s ease;
+}
+
+.about_middle_lsj .left_lsj .item_lsj span:nth-child(2):hover {
+    color: #47B2E4;
+    transition: color 0.4s ease;
+}
+
+.about_middle_lsj .left_lsj .item_lsj span:nth-child(3) {
+    margin-left: auto;
+    transition: transform 0.4s ease;
+}
+
+.about_middle_lsj .left_lsj .item_lsj span:nth-child(3):hover {
+    color: #47B2E4;
+    transition: color 0.4s ease;
+}
+
+.about_middle_lsj .right_lsj {
+    width: 80%;
+}
+
+.about_middle_lsj .right_lsj img {
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+}
 
 
 /* ABOUT US - BOTTOM */
@@ -373,6 +439,13 @@
     .about_top_lsj .bottom_lsj {
         flex-direction: column;
     }
+
+    /* ABOUT US - MIDDLE */
+    .about_middle_lsj {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
 }
 
 @media (max-width: 380px) {
@@ -416,5 +489,8 @@
     }
 
     /* ABOUT US - TOP */
+    /* 구현 없음 */
+
+    /* ABOUT US - MIDDLE */
     /* 구현 없음 */
 }
