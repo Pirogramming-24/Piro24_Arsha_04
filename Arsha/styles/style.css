@@ -29,7 +29,7 @@
 .home_lsj .left_lsj p {
     font-size: 22px;
     font-weight: 600;
-    color: #c5c5c5;
+    color: #cad8dadf;
 }
 
 .home_lsj .left_lsj .bottom_lsj {
@@ -109,14 +109,57 @@
     }
 }
 
+.zoom_out_once_lsj {
+    animation: zoomOutOnce_lsj 0.8s ease-out forwards;
+}
+
+@keyframes zoomOutOnce_lsj {
+    from {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
 
 /* LOGO SLIDE */
-.slide_frame_lsj {}
+.slide_frame_lsj {
+    width: 100%;
+    height: 70px;
+    overflow: hidden;
+    background-color: #f5f6f8;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
 
-.slide_frame_lsj .slide_lsj {}
+.slide_frame_lsj .slide_lsj {
+    display: flex;
+    width: max-content;
+    align-items: center;
+    justify-content: center;
 
-.slide_frame_lsj .slide_lsj img {}
+    animation: stepMove_lsj 16s steps(8) infinite;
+}
 
+.slide_frame_lsj .slide_lsj img {
+    width: 240px;
+    height: 33px;
+    object-fit: contain;
+}
+
+@keyframes stepMove_lsj {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-1920px);
+    }
+}
 
 /* ABOUT US - TOP */
 .about_top_lsj {}
