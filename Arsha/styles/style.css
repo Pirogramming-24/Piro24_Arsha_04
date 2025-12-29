@@ -146,6 +146,7 @@
 .about_top_lsj {
     padding: 60px 0;
     background: #fff;
+    width: 100%;
 }
 
 .about_top_lsj .top_lsj {
@@ -685,13 +686,11 @@
     padding: 120px 0;
     color: #fff;
 
-    /* ✅ 이게 “스크롤 따라 부분부분 보이는” 핵심 */
     background-image: url("../images/lsj/call_to_action.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    /* ✅ */
 }
 
 .call_to_action_lsj::before {
@@ -750,7 +749,24 @@
 }
 
 /* media */
-@media (max-width: 768px) {
+
+@media (max-width: 1200px) {
+
+    /* SERVICES */
+    .service_lsj .bottom_lsj {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    /* CALL TO ACTION */
+    .call_to_action_lsj .cta_inner {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 992px) {
 
     /* HOME */
     .home_lsj {
@@ -806,6 +822,32 @@
         flex-direction: column;
         gap: 40px;
     }
+
+    /* WORK PROCESS */
+    .work_process_lsj .bottom_lsj {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .home_lsj,
+    .about_top_lsj,
+    .about_middle_lsj .left_lsj,
+    .about_middle_lsj .right_lsj,
+    .about_bottom_lsj,
+    .service_lsj .top_lsj,
+    .service_lsj .bottom_lsj,
+    .work_process_lsj {
+        transform: scale(0.8);
+    }
+
+    /* SERVICES */
+    .service_lsj .bottom_lsj {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 380px) {
@@ -847,13 +889,4 @@
             transform: translateX(-1360px);
         }
     }
-
-    /* ABOUT US - TOP */
-    /* 구현 없음 */
-
-    /* ABOUT US - MIDDLE */
-    /* 구현 없음 */
-
-    /* ABOUT US - BOTTOM */
-    /* 구현 없음 */
 }
