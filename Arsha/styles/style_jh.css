@@ -155,7 +155,6 @@
     max-width: 650px;
 }
 
-/* input + button pill */
 .suscriber_jh {
     max-width: 720px;
     display: flex;
@@ -194,7 +193,6 @@
     background: #209dd8;
 }
 
-/* right image */
 .suscribe_jh .image_jh {
     flex: 0 0 380px;
     display: flex;
