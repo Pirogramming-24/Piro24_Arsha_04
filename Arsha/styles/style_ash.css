@@ -335,7 +335,7 @@ header {
 
 .footer-newsletter{
     padding:60px 0;
-    background-color: rgba(194, 192, 192, 0.164);
+    background-color: #f5f6f8;
     text-align: center;
 }
 
@@ -380,6 +380,12 @@ header {
     top:0;
     bottom:0;
     right:0;
+    transition:0.3s ease;
+}
+
+.footer-newsletter form input[type="submit"]:hover{
+    filter: brightness(1.2);
+    cursor:pointer;
 }
 
 .footer-newsletter form:focus-within{
@@ -515,6 +521,10 @@ header {
     color:#01a7eb;
 }
 
+.credits a:hover {
+    color: #7db9d4;
+}
+
 /* header responsive */
 @media (max-width:1024px) {
     .header-left .icons{
@@ -575,6 +585,48 @@ header {
     padding: 60px 0;
     background: #fff;
     font-family: "Open Sans", sans-serif;
+}
+.info-item .icon-box {
+    width: 48px;
+    height: 48px;
+    background: #eef7ff;
+    border-radius: 50%;
+    display: flex;         /* 중앙 정렬을 위한 플렉스 */
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    padding: 0 !important; /* 여백 0으로 이미지 공간 극대화 */
+    overflow: hidden;      /* 이미지가 박스 원형 밖으로 나가지 않게 절단 */
+    position: relative;
+}
+
+.info-item .icon-box img {
+    /* 기본적으로 박스에 꽉 차게 설정 */
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    
+    /* 핵심: scale을 사용하여 이미지 자체를 1.5배~2배 뻥튀기 */
+    /* 이미지 내부에 투명 여백이 아무리 많아도 이 수치를 높이면 무조건 커집니다 */
+    transform: scale(1.6); 
+    
+    /* 뒤틀림 방지: 이전의 absolute 설정이 남아있다면 초기화 */
+    position: static !important; 
+    transition: 0.3s ease;
+}
+.info-item {
+    display: flex;
+    align-items: center; /* 아이콘과 텍스트 중앙 맞춤 */
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.info-item:hover .icon-box {
+    background: #47b2e4;
+}
+
+.info-item:hover .icon-box img {
+    filter: brightness(0) invert(1);
 }
 
 .container {
@@ -892,286 +944,63 @@ header {
     }
 }
 
-
-
-/* contact */
-/* contact-zone */
-/* contact */
-
-
-
-/* Contact */
-.contact {
-    padding: 60px 0;
-    background: #fff;
-    font-family: "Open Sans", sans-serif;
-}
-
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-    box-sizing: border-box;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.section-title h2 {
-    font-size: 32px;
-    font-weight: 900;
-    color: #37517e;
-    position: relative;
-    padding-bottom: 20px;
-}
-
-.section-title h2::before {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 120px;
-    height: 1px;
-    background: #ddd;
-    bottom: 1px;
-    left: calc(50% - 60px);
-}
-
-.section-title h2::after {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 50px;
-    height: 3px;
-    background: #47b2e4;
-    bottom: 0;
-    left: calc(50% - 25px);
-}
-
-.section-title p {
-    margin-top: 15px;
-    color: #444;
-}
-
-.contact-grid {
-    display: flex;
-    gap: 20px;
-    align-items: stretch;
-    justify-content: center;
-}
-
-.info-container {
-    flex: 0 0 40%;
-    max-width: 526px;
-    padding: 30px;
-    background: #fff;
-    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.1);
-    border-top: 3px solid #47b2e4;
-    border-bottom: 3px solid #47b2e4;
-    box-sizing: border-box;
-}
-
-.form-container {
-    flex: 0 0 60%;
-    max-width: 746px;
-    padding: 30px;
-    background: #fff;
-    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.1);
-    border-top: 3px solid #47b2e4;
-    border-bottom: 3px solid #47b2e4;
-    box-sizing: border-box;
-}
-
-.info-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 15px;
-    margin-bottom: 35px;
-}
-
-.info-item .icon-box {
-    width: 44px;
-    height: 44px;
-    background: #eef7ff;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.3s;
-    flex-shrink: 0;
-}
-
-.info-item .icon-box img {
-    width: 20px;
+header {
     height: auto;
+    /* 기존 32px 덮어쓰기 */
+    background: transparent;
 }
 
-.info-item:hover .icon-box {
-    background: #47b2e4;
+/* 1) 상단 프리뷰 바는 항상 고정 */
+.header-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
 }
 
-.info-item:hover .icon-box img {
-    filter: brightness(0) invert(1);
+/* 2) 네비 바는 프리뷰 바 아래에 고정(32px 아래!) */
+.header-bottom {
+    position: fixed;
+    top: 32px;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+
+    /* 처음 상태: 투명(Arsha처럼 hero 위에 얹히는 느낌) */
+    background: rgba(55, 82, 126, 0);
+    box-shadow: none;
+
+    /* 기본 패딩(너 기존값 유지) */
+    padding: 15px 0;
+
+    transition: padding .25s ease, background-color .25s ease, box-shadow .25s ease;
 }
 
-.info-item .content h4 {
-    font-size: 20px;
-    font-weight: 700;
-    color: #37517e;
-    margin: 0;
+/* 3) body는 프리뷰 바(32px)만큼만 내려주기 */
+body {
+    padding-top: 32px;
 }
 
-.info-item .content p {
-    font-size: 14px;
-    color: #6182ba;
-    margin: 5px 0 0 0;
-}
-
-#map {
-    width: 100%;
-    height: 290px;
-    margin-top: 20px;
-    background: #f4f4f4;
-}
-
-.contact-form .row {
-    display: flex;
-    gap: 20px;
-}
-
-.contact-form .row .form-group {
-    flex: 1;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-size: 14px;
-    color: #444;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 10px 15px;
-    border: 1px solid #ced4da;
-    border-radius: 4px;
-    outline: none;
-    box-sizing: border-box;
-    transition: 0.3s;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    border-color: #47b2e4;
-}
-
-.text-center {
-    text-align: center;
-    width: 100%;
-    margin-top: 20px;
-}
-
-.contact-form button[type="submit"] {
-    background: #47b2e4;
-    border: 0;
-    padding: 12px 40px;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 500;
-    transition: 0.4s;
-    border-radius: 50px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-.contact-form button[type="submit"]:hover {
-    background: #209dd8;
-}
-
-@media (max-width: 1400px) {
-    .info-container {
-        max-width: 451px;
+/* 4) 스크롤하면(0~240px 사이) 헤더가 점점 “진해지고/얇아짐” */
+@supports (animation-timeline: scroll(root)) {
+    .header-bottom {
+        animation: headerMorph 1s linear both;
+        animation-timeline: scroll(root);
+        animation-range: 0px 240px;
     }
 
-    .form-container {
-        max-width: 641px;
-    }
-}
+    @keyframes headerMorph {
+        from {
+            background: rgba(55, 82, 126, 0);
+            padding: 18px 0;
+            box-shadow: none;
+        }
 
-@media (max-width: 1199px) {
-    .info-container {
-        max-width: 376px;
-    }
-
-    .form-container {
-        max-width: 536px;
-    }
-}
-
-@media (max-width: 991px) {
-    .contact-grid {
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 30px;
-    }
-
-    .info-container,
-    .form-container {
-        width: 100% !important;
-        max-width: 700px !important;
-        flex: none !important;
-        margin: 0 auto !important;
-    }
-}
-
-@media (max-width: 768px) {
-
-    .info-container,
-    .form-container {
-        max-width: 100% !important;
-    }
-
-    .contact-form .row {
-        flex-direction: column;
-        gap: 0;
-    }
-}
-
-@keyframes contactRiseUp_ash {
-    from {
-        opacity: 0;
-        transform: translateY(24px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.contact {
-    opacity: 0;
-    transform: translateY(24px);
-    will-change: transform, opacity;
-
-    animation: contactRiseUp_ash 0.7s ease both;
-    animation-timeline: view();
-
-    animation-range: entry 30% cover 70%;
-}
-
-/* 접근성 (모션 줄이기) */
-@media (prefers-reduced-motion: reduce) {
-    .contact {
-        animation: none;
-        opacity: 1;
-        transform: none;
+        to {
+            background: rgba(40, 58, 90, 0.95);
+            padding: 10px 0;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, .12);
+        }
     }
 }
