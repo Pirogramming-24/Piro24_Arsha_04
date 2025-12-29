@@ -1,11 +1,6 @@
 /* =========================
    공통 스타일
    ========================= */
-body {
-  line-height: 1.5;
-  font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  color: #444444;
-}
 
 .section-bg_hhd {
   background-color: #f3f5fa;
@@ -170,9 +165,6 @@ body {
 }
 
 .member-content_hhd h2 {
-  font-family: "Jost", sans-serif;
-  font-weight: 700;
-  line-height: 1.2;
   margin-bottom: 5px;
   font-size: 20px;
   color: #37517e;
