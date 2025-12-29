@@ -103,7 +103,10 @@
                 <p>We are team of talented designers making websites with Bootstrap</p>
                 <div class="bottom_lsj">
                     <a href="#" class="startBtn_lsj">Get Started</a>
-                    <a href="#" class="videoBtn_lsj">Watch Video</a>
+                    <a href="#" class="videoBtn_lsj">
+                        <span class="playIcon_lsj" aria-hidden="true"></span>
+                        Watch Video
+                    </a>
                 </div>
             </div>
 
@@ -176,7 +179,6 @@
         </div>
     </div>
 
-    <!--2-->
     <div class="about_middle_lsj">
         <div class="left_lsj">
             <div class="top_lsj">
@@ -189,24 +191,51 @@
                     et dolore magna aliqua. Duis aute irure dolor in reprehenderit
                 </p>
             </div>
+
             <div class="bottom_lsj">
-                <div class="item_lsj">
-                    <span>01</span>
-                    <span>Non consectetur a erat nam at lectus urna duis?</span>
-                    <span>></span>
-                </div>
-                <div class="item_lsj">
-                    <span>02</span>
-                    <span>Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?</span>
-                    <span>></span>
-                </div>
-                <div class="item_lsj">
-                    <span>03</span>
-                    <span>Dolor sit amet consectetur adipiscing elit pellentesque?</span>
-                    <span>></span>
-                </div>
+                <details class="item_lsj">
+                    <summary class="item_head_lsj">
+                        <span class="num_lsj">01</span>
+                        <span class="title_lsj">Non consectetur a erat nam at lectus urna duis?</span>
+                        <span class="arrow_lsj" aria-hidden="true"></span>
+                    </summary>
+                    <div class="item_body_lsj">
+                        Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non
+                        curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                    </div>
+                </details>
+
+                <details class="item_lsj">
+                    <summary class="item_head_lsj">
+                        <span class="num_lsj">02</span>
+                        <span class="title_lsj">Feugiat scelerisque varius morbi enim nunc faucibus a
+                            pellentesque?</span>
+                        <span class="arrow_lsj" aria-hidden="true"></span>
+                    </summary>
+                    <div class="item_body_lsj">
+                        Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit
+                        laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est
+                        pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt
+                        dui.
+                    </div>
+                </details>
+
+                <details class="item_lsj">
+                    <summary class="item_head_lsj">
+                        <span class="num_lsj">03</span>
+                        <span class="title_lsj">Dolor sit amet consectetur adipiscing elit pellentesque?</span>
+                        <span class="arrow_lsj" aria-hidden="true"></span>
+                    </summary>
+                    <div class="item_body_lsj">
+                        Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar
+                        elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus
+                        pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at
+                        elementum eu facilisis sed odio morbi quis
+                    </div>
+                </details>
             </div>
         </div>
+
         <div class="right_lsj">
             <img src="images/lsj/about_middle.png" alt="">
         </div>
@@ -1057,9 +1086,9 @@
             </div>
 
             <div class="contact-grid">
-                
+
                 <div class="info-container">
-                    
+
                     <div class="info-item">
                         <div class="icon-box">
                             <img src="images/address icon.png" alt="address">
@@ -1091,22 +1120,16 @@
                     </div>
 
                     <div id="map">
-                        <iframe 
-                            src="https://buly.kr/4QoWiHf" 
-                            width="100%" 
-                            height="100%" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade">
+                        <iframe src="https://buly.kr/4QoWiHf" width="100%" height="100%" style="border:0;"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
                     </div>
-            
+
                 </div>
 
                 <div class="form-container">
                     <form action="" method="post" class="contact-form">
-                        
+
                         <div class="row">
                             <div class="form-group">
                                 <label for="name">Your Name</label>
@@ -1139,61 +1162,63 @@
     </section>
     <!-- 안시현 contact 끝 -->
 
-        <!-- 안시현 footer 시작 -->
+    <!-- 안시현 footer 시작 -->
     <footer id="footer">
         <div class="footer-newsletter">
             <div class="container">
-            <h3>Join Our Newsletter</h3>
-            <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
-            <form action="" method="post">
-                <input type="email" name="email">
-                <input type="submit" value="Subscribe">
-            </form>
+                <h3>Join Our Newsletter</h3>
+                <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+                <form action="" method="post">
+                    <input type="email" name="email">
+                    <input type="submit" value="Subscribe">
+                </form>
             </div>
         </div>
 
         <div class="footer-top">
             <div class="container">
-            <div class="footer-grid">
-                <div class="footer-info">
-                <h3>ARSHA</h3><br>
-                <p>A108 Adam Street <br> New York, NY 535022<br><br>
-                    <strong>Phone:</strong> +1 5589 55488 55<br>
-                    <strong>Email:</strong> info@example.com<br>
-                </p>
-                </div>
+                <div class="footer-grid">
+                    <div class="footer-info">
+                        <h3>ARSHA</h3><br>
+                        <p>A108 Adam Street <br> New York, NY 535022<br><br>
+                            <strong>Phone:</strong> +1 5589 55488 55<br>
+                            <strong>Email:</strong> info@example.com<br>
+                        </p>
+                    </div>
 
-                <div class="footer-links">
-                <h4>Useful Links</h4>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Terms of service</a></li>
-                </ul>
-                </div>
+                    <div class="footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Terms of service</a></li>
+                        </ul>
+                    </div>
 
-                <div class="footer-links">
-                <h4>Our Services</h4>
-                <ul>
-                    <li><a href="#">Web Design</a></li>
-                    <li><a href="#">Web Development</a></li>
-                    <li><a href="#">Product Management</a></li>
-                    <li><a href="#">Marketing</a></li>
-                </ul>
-                </div>
+                    <div class="footer-links">
+                        <h4>Our Services</h4>
+                        <ul>
+                            <li><a href="#">Web Design</a></li>
+                            <li><a href="#">Web Development</a></li>
+                            <li><a href="#">Product Management</a></li>
+                            <li><a href="#">Marketing</a></li>
+                        </ul>
+                    </div>
 
-                <div class="footer-contact">
-                <h4>Follow Us</h4>
-                <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p><br>
-                <div class="social-links">
-                    <a href="https://bootstrapmade.com/demo/Arsha/"><img src="images/x.png" alt="x"></a>
-                    <a href="https://bootstrapmade.com/demo/Arsha/"><img src="images/facebook.png" alt="facebook"></a>
-                    <a href="https://bootstrapmade.com/demo/Arsha/"><img src="images/insta.png" alt="insta"></a>
-                    <a href="https://bootstrapmade.com/demo/Arsha/"><img src="images/linkedin.png" alt="linkedin"></a>
+                    <div class="footer-contact">
+                        <h4>Follow Us</h4>
+                        <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p><br>
+                        <div class="social-links">
+                            <a href="https://bootstrapmade.com/demo/Arsha/"><img src="images/x.png" alt="x"></a>
+                            <a href="https://bootstrapmade.com/demo/Arsha/"><img src="images/facebook.png"
+                                    alt="facebook"></a>
+                            <a href="https://bootstrapmade.com/demo/Arsha/"><img src="images/insta.png" alt="insta"></a>
+                            <a href="https://bootstrapmade.com/demo/Arsha/"><img src="images/linkedin.png"
+                                    alt="linkedin"></a>
+                        </div>
+                    </div>
                 </div>
-                </div>
-            </div>
             </div>
         </div>
         <div class="footer-bottom">
@@ -1209,4 +1234,5 @@
     </footer>
     <!-- 안시현 footer 끝 -->
 </body>
+
 </html>
