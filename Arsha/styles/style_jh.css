@@ -412,7 +412,7 @@
     animation: faqRiseUp_jh 0.7s ease both;
     animation-timeline: view();
 
-    animation-range: entry 20% cover 35%;
+    animation-range: entry 20% cover 55%;
 }
 
 .faq_jh>h1 {
