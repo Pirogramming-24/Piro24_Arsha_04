@@ -1023,6 +1023,34 @@
     }
 }
 
+@keyframes sectionRiseUp_lsj {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about_top_lsj,
+.about_middle_lsj,
+.about_bottom_lsj,
+.service_lsj,
+.work_process_lsj,
+.call_to_action_lsj {
+    opacity: 0;
+    transform: translateY(24px);
+    will-change: transform, opacity;
+
+    animation: sectionRiseUp_lsj 0.7s ease both;
+    animation-timeline: view();
+
+    animation-range: entry 30% cover 70%;
+}
+
 @supports (animation-timeline: view()) {
     @keyframes fillBar_lsj {
         from {
@@ -1035,39 +1063,32 @@
     }
 
     .about_bottom_lsj .progress_lsj .box_lsj::after {
+        transform: scaleX(0);
+        transform-origin: left;
+        will-change: transform;
+
         animation: fillBar_lsj 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
         animation-timeline: view();
-        animation-range: entry 10% cover 85%;
+
+        animation-range: entry 30% cover 70%;
     }
-}
-
-@keyframes graphRiseUp_lsj {
-    from {
-        opacity: 0;
-        transform: translateY(24px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.about_bottom_lsj {
-    opacity: 0;
-    transform: translateY(24px);
-    will-change: transform, opacity;
-
-    animation: graphRiseUp_lsj 0.7s ease both;
-    animation-timeline: view();
-
-    animation-range: entry 30% cover 70%;
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .about_bottom_lsj {
+
+    .about_top_lsj,
+    .about_middle_lsj,
+    .about_bottom_lsj,
+    .service_lsj,
+    .work_process_lsj,
+    .call_to_action_lsj {
         animation: none;
         opacity: 1;
+        transform: none;
+    }
+
+    .about_bottom_lsj .progress_lsj .box_lsj::after {
+        animation: none;
         transform: none;
     }
 }

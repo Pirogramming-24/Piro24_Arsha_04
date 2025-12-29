@@ -390,6 +390,74 @@
 
 @media (max-width: 380px) {}
 
+@keyframes sectionRiseUp_jh {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.suscribe_jh,
+.rbp_jh {
+    opacity: 0;
+    transform: translateY(24px);
+    will-change: transform, opacity;
+
+    animation: sectionRiseUp_jh 0.7s ease both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 35%;
+}
+
+.cards_jh .card_jh {
+    opacity: 0;
+    transform: translateY(24px);
+    will-change: transform, opacity;
+
+    animation: sectionRiseUp_jh 0.7s ease both;
+    animation-timeline: view();
+    animation-range: entry 30% cover 70%;
+}
+
+.cards_jh .card_jh:nth-child(1) {
+    animation-delay: 0.00s;
+}
+
+.cards_jh .card_jh:nth-child(2) {
+    animation-delay: 0.08s;
+}
+
+.cards_jh .card_jh:nth-child(3) {
+    animation-delay: 0.16s;
+}
+
+.cards_jh .card_jh:nth-child(4) {
+    animation-delay: 0.24s;
+}
+
+.cards_jh .card_jh:nth-child(5) {
+    animation-delay: 0.32s;
+}
+
+.cards_jh .card_jh:nth-child(6) {
+    animation-delay: 0.40s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .suscribe_jh,
+    .rbp_jh,
+    .cards_jh .card_jh {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+}
+
 @keyframes faqRiseUp_jh {
     from {
         opacity: 0;
