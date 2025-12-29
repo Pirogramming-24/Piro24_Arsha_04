@@ -655,7 +655,7 @@ body {
   }
 }
 
-@keyframes testimonialRiseUp_hhd {
+@keyframes sectionRiseUp_hhd {
   from {
     opacity: 0;
     transform: translateY(24px);
@@ -667,19 +667,23 @@ body {
   }
 }
 
-
+.team_hhd,
+.pricing_hhd,
 .testimonials_hhd {
   opacity: 0;
   transform: translateY(24px);
   will-change: transform, opacity;
 
-  animation: testimonialRiseUp_hhd 0.7s ease both;
+  animation: sectionRiseUp_hhd 0.7s ease both;
   animation-timeline: view();
 
   animation-range: entry 30% cover 70%;
 }
 
 @media (prefers-reduced-motion: reduce) {
+
+  .team_hhd,
+  .pricing_hhd,
   .testimonials_hhd {
     animation: none;
     opacity: 1;
