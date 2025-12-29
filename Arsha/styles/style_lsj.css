@@ -82,7 +82,6 @@
     transition: color 0.3s ease;
 }
 
-/* 원 */
 .home_lsj .bottom_lsj .videoBtn_lsj .playIcon_lsj {
     width: 34px;
     height: 34px;
@@ -94,7 +93,6 @@
     transition: border-color 0.3s ease;
 }
 
-/* ▶ 삼각형 */
 .home_lsj .bottom_lsj .videoBtn_lsj .playIcon_lsj::before {
     content: "";
     position: absolute;
@@ -111,7 +109,6 @@
     transition: border-left-color 0.3s ease;
 }
 
-/* 호버: 텍스트 + 원 + 삼각형 모두 파란색 */
 .home_lsj .bottom_lsj .videoBtn_lsj:hover {
     color: #47B2E4;
 }
@@ -865,7 +862,7 @@
     background: rgba(55, 81, 126, 0.589);
 }
 
-.call_to_action_lsj .cta_inner {
+.call_to_action_lsj .cta_inner_lsj {
     position: relative;
     z-index: 1;
 
@@ -878,7 +875,7 @@
     gap: 24px;
 }
 
-.call_to_action_lsj .cta_text {
+.call_to_action_lsj .cta_text_lsj {
     max-width: 720px;
 }
 
@@ -896,7 +893,7 @@
     color: #e6e6e6;
 }
 
-.call_to_action_lsj .cta_btn {
+.call_to_action_lsj .cta_btn_lsj {
     font-family: "Jost", sans-serif;
     display: inline-block;
     padding: 12px 40px;
@@ -910,7 +907,7 @@
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
-.call_to_action_lsj .cta_btn:hover {
+.call_to_action_lsj .cta_btn_lsj:hover {
     background: #47B2E4;
     border-color: #47B2E4;
 }
@@ -927,7 +924,7 @@
     }
 
     /* CALL TO ACTION */
-    .call_to_action_lsj .cta_inner {
+    .call_to_action_lsj .cta_inner_lsj {
         flex-direction: column;
         text-align: center;
     }
@@ -994,6 +991,11 @@
         display: flex;
         flex-direction: column;
     }
+
+    .call_to_action_lsj {
+        background-attachment: scroll;
+        transform: none;
+    }
 }
 
 @media (max-width: 380px) {
@@ -1053,16 +1055,19 @@
 .about_middle_lsj,
 .about_bottom_lsj,
 .service_lsj,
-.work_process_lsj,
-.call_to_action_lsj {
+.work_process_lsj {
     opacity: 0;
     transform: translateY(24px);
     will-change: transform, opacity;
 
     animation: sectionRiseUp_lsj 0.7s ease both;
     animation-timeline: view();
-
     animation-range: entry 30% cover 70%;
+}
+
+.call_to_action_lsj {
+    opacity: 1;
+    transform: none;
 }
 
 @supports (animation-timeline: view()) {
