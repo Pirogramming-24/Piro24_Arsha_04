@@ -386,7 +386,7 @@ header {
 }
 
 .footer-newsletter form input[type="submit"]:hover{
-    filter: brightness(1.2);
+    background: #66c7ec;
     cursor:pointer;
 }
 
@@ -824,7 +824,7 @@ header {
 }
 
 .contact-form button[type="submit"]:hover {
-    background: #209dd8;
+    background: #66c7ec;
 }
 
 @media (max-width: 1400px) {
@@ -989,6 +989,34 @@ header {
 /* 3) body는 프리뷰 바(32px)만큼만 내려주기 */
 body {
     padding-top: 32px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    background: #47b2e4;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.scroll-to-top:hover {
+    background: #66c7ec;
+}
+
+.scroll-to-top i {
+    font-size: 15px;
 }
 
 /* 4) 스크롤하면(0~240px 사이) 헤더가 점점 “진해지고/얇아짐” */
