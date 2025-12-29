@@ -74,10 +74,10 @@
     background-color: #47b2e4;
 }
 
-#filter_all:checked ~ .buttons_kkw label[for="filter_all"],
-#filter_app:checked ~ .buttons_kkw label[for="filter_app"],
-#filter_card:checked ~ .buttons_kkw label[for="filter_card"],
-#filter_web:checked ~ .buttons_kkw label[for="filter_web"] {
+#filter_all:checked~.buttons_kkw label[for="filter_all"],
+#filter_app:checked~.buttons_kkw label[for="filter_app"],
+#filter_card:checked~.buttons_kkw label[for="filter_card"],
+#filter_web:checked~.buttons_kkw label[for="filter_web"] {
     color: #fff;
     background-color: #47b2e4;
     border-color: #47b2e4;
@@ -167,15 +167,41 @@
 }
 
 /* 각 이미지의 높이에 따라 grid-row span 조정 */
-.grids_kkw .portfolioItem_kkw:nth-child(1) { grid-row: span 21; }
-.grids_kkw .portfolioItem_kkw:nth-child(2) { grid-row: span 11; }
-.grids_kkw .portfolioItem_kkw:nth-child(3) { grid-row: span 11; }
-.grids_kkw .portfolioItem_kkw:nth-child(4) { grid-row: span 11; }
-.grids_kkw .portfolioItem_kkw:nth-child(5) { grid-row: span 21; }
-.grids_kkw .portfolioItem_kkw:nth-child(6) { grid-row: span 21; }
-.grids_kkw .portfolioItem_kkw:nth-child(7) { grid-row: span 11; }
-.grids_kkw .portfolioItem_kkw:nth-child(8) { grid-row: span 11; }
-.grids_kkw .portfolioItem_kkw:nth-child(9) { grid-row: span 11; }
+.grids_kkw .portfolioItem_kkw:nth-child(1) {
+    grid-row: span 21;
+}
+
+.grids_kkw .portfolioItem_kkw:nth-child(2) {
+    grid-row: span 11;
+}
+
+.grids_kkw .portfolioItem_kkw:nth-child(3) {
+    grid-row: span 11;
+}
+
+.grids_kkw .portfolioItem_kkw:nth-child(4) {
+    grid-row: span 11;
+}
+
+.grids_kkw .portfolioItem_kkw:nth-child(5) {
+    grid-row: span 21;
+}
+
+.grids_kkw .portfolioItem_kkw:nth-child(6) {
+    grid-row: span 21;
+}
+
+.grids_kkw .portfolioItem_kkw:nth-child(7) {
+    grid-row: span 11;
+}
+
+.grids_kkw .portfolioItem_kkw:nth-child(8) {
+    grid-row: span 11;
+}
+
+.grids_kkw .portfolioItem_kkw:nth-child(9) {
+    grid-row: span 11;
+}
 
 /* 필터링 애니메이션 */
 @keyframes fadeIn {
@@ -183,6 +209,7 @@
         opacity: 0;
         transform: scale(0.8);
     }
+
     to {
         opacity: 1;
         transform: scale(1);
@@ -194,34 +221,34 @@
 }
 
 /* All 선택 시: 모든 이미지 표시 */
-#filter_all:checked ~ .grids_kkw .portfolioItem_kkw {
+#filter_all:checked~.grids_kkw .portfolioItem_kkw {
     display: block;
 }
 
 /* App 선택 시: app_kkw만 표시 */
-#filter_app:checked ~ .grids_kkw .portfolioItem_kkw {
+#filter_app:checked~.grids_kkw .portfolioItem_kkw {
     display: none;
 }
 
-#filter_app:checked ~ .grids_kkw .app_kkw {
+#filter_app:checked~.grids_kkw .app_kkw {
     display: block;
 }
 
 /* Card 선택 시: card_kkw만 표시 */
-#filter_card:checked ~ .grids_kkw .portfolioItem_kkw {
+#filter_card:checked~.grids_kkw .portfolioItem_kkw {
     display: none;
 }
 
-#filter_card:checked ~ .grids_kkw .card_kkw {
+#filter_card:checked~.grids_kkw .card_kkw {
     display: block;
 }
 
 /* Web 선택 시: web_kkw만 표시 */
-#filter_web:checked ~ .grids_kkw .portfolioItem_kkw {
+#filter_web:checked~.grids_kkw .portfolioItem_kkw {
     display: none;
 }
 
-#filter_web:checked ~ .grids_kkw .web_kkw {
+#filter_web:checked~.grids_kkw .web_kkw {
     display: block;
 }
 
@@ -332,15 +359,41 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .grids_kkw .portfolioItem_kkw:nth-child(1) { grid-row: span 23; }
-    .grids_kkw .portfolioItem_kkw:nth-child(2) { grid-row: span 12; }
-    .grids_kkw .portfolioItem_kkw:nth-child(3) { grid-row: span 12; }
-    .grids_kkw .portfolioItem_kkw:nth-child(4) { grid-row: span 12; }
-    .grids_kkw .portfolioItem_kkw:nth-child(5) { grid-row: span 23; }
-    .grids_kkw .portfolioItem_kkw:nth-child(6) { grid-row: span 23; }
-    .grids_kkw .portfolioItem_kkw:nth-child(7) { grid-row: span 12; }
-    .grids_kkw .portfolioItem_kkw:nth-child(8) { grid-row: span 12; }
-    .grids_kkw .portfolioItem_kkw:nth-child(9) { grid-row: span 12; }
+    .grids_kkw .portfolioItem_kkw:nth-child(1) {
+        grid-row: span 23;
+    }
+
+    .grids_kkw .portfolioItem_kkw:nth-child(2) {
+        grid-row: span 12;
+    }
+
+    .grids_kkw .portfolioItem_kkw:nth-child(3) {
+        grid-row: span 12;
+    }
+
+    .grids_kkw .portfolioItem_kkw:nth-child(4) {
+        grid-row: span 12;
+    }
+
+    .grids_kkw .portfolioItem_kkw:nth-child(5) {
+        grid-row: span 23;
+    }
+
+    .grids_kkw .portfolioItem_kkw:nth-child(6) {
+        grid-row: span 23;
+    }
+
+    .grids_kkw .portfolioItem_kkw:nth-child(7) {
+        grid-row: span 12;
+    }
+
+    .grids_kkw .portfolioItem_kkw:nth-child(8) {
+        grid-row: span 12;
+    }
+
+    .grids_kkw .portfolioItem_kkw:nth-child(9) {
+        grid-row: span 12;
+    }
 }
 
 @media (max-width: 768px) {
@@ -353,7 +406,7 @@
         max-width: 600px;
         margin: 0 auto;
     }
-    
+
     /* 1열일 때는 모든 이미지가 자동 높이: 이미지 잘림 방지 */
     .grids_kkw .portfolioItem_kkw:nth-child(1),
     .grids_kkw .portfolioItem_kkw:nth-child(2),
@@ -363,7 +416,7 @@
     .grids_kkw .portfolioItem_kkw:nth-child(6),
     .grids_kkw .portfolioItem_kkw:nth-child(7),
     .grids_kkw .portfolioItem_kkw:nth-child(8),
-    .grids_kkw .portfolioItem_kkw:nth-child(9) { 
+    .grids_kkw .portfolioItem_kkw:nth-child(9) {
         grid-row: auto;
     }
 
@@ -398,5 +451,34 @@
     }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 380px) {}
+
+@keyframes portfolioRiseUp_kkw {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.portfolio_kkw {
+    opacity: 0;
+    transform: translateY(24px);
+    will-change: transform, opacity;
+
+    animation: portfolioRiseUp_kkw 0.7s ease both;
+    animation-timeline: view();
+    animation-range: entry 30% cover 70%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .portfolio_kkw {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
 }
