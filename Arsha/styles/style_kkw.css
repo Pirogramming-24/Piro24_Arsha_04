@@ -118,7 +118,7 @@
     opacity: 0.9;
     transform: translateY(100%);
     transition: transform 0.3s ease;
-    padding: 20px;
+    padding: 9px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -133,14 +133,14 @@
 }
 
 .portfolioInfo_kkw h4 {
-    font-size: 1.1rem;
+    font-size: 1.0rem;
     font-weight: 600;
     color: #37517e;
-    margin-bottom: 15px;
+    margin-bottom: 3px;
 }
 
 .portfolioInfo_kkw p {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     color: #666;
     margin: 0;
 }
