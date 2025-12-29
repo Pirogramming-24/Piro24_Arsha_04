@@ -112,33 +112,93 @@
     height: 70px;
     overflow: hidden;
     background-color: #f5f6f8;
+    display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 20px;
+    padding: 20px 0;
 }
 
+/* 트랙 */
 .slide_frame_lsj .slide_lsj {
-    display: flex;
-    width: max-content;
-    align-items: center;
-    justify-content: center;
+    --logo-w: 240px;
+    --gap: 20px;
+    --step: calc(var(--logo-w) + var(--gap));
 
-    animation: stepMove_lsj 16s steps(8) infinite;
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+    width: max-content;
+
+    animation: logoOneByOne_lsj 24s linear infinite;
+    will-change: transform;
 }
 
 .slide_frame_lsj .slide_lsj img {
-    width: 240px;
+    width: var(--logo-w);
     height: 33px;
     object-fit: contain;
+    flex: 0 0 auto;
+
+    transition: transform 0.4s ease;
 }
 
-@keyframes stepMove_lsj {
-    from {
+.slide_frame_lsj .slide_lsj img:hover {
+    transform: scale(1.2);
+}
+
+/* ✅ 8칸(원본 8개) 만큼만 이동하면 복제랑 자연스럽게 이어짐 */
+@keyframes logoOneByOne_lsj {
+
+    /* 0칸(멈춤) */
+    0%,
+    10% {
         transform: translateX(0);
     }
 
-    to {
-        transform: translateX(-1920px);
+    /* 1칸 */
+    12.5%,
+    22.5% {
+        transform: translateX(calc(-1 * var(--step)));
+    }
+
+    /* 2칸 */
+    25%,
+    35% {
+        transform: translateX(calc(-2 * var(--step)));
+    }
+
+    /* 3칸 */
+    37.5%,
+    47.5% {
+        transform: translateX(calc(-3 * var(--step)));
+    }
+
+    /* 4칸 */
+    50%,
+    60% {
+        transform: translateX(calc(-4 * var(--step)));
+    }
+
+    /* 5칸 */
+    62.5%,
+    72.5% {
+        transform: translateX(calc(-5 * var(--step)));
+    }
+
+    /* 6칸 */
+    75%,
+    85% {
+        transform: translateX(calc(-6 * var(--step)));
+    }
+
+    /* 7칸 */
+    87.5%,
+    97.5% {
+        transform: translateX(calc(-7 * var(--step)));
+    }
+
+    /* 8칸(원본 끝) → 복제 시작과 동일 위치 */
+    100% {
+        transform: translateX(calc(-8 * var(--step)));
     }
 }
 
@@ -785,25 +845,6 @@
     }
 
     /* LOGO SLIDE */
-    .slide_frame_lsj .slide_lsj {
-        animation: stepMove_lsj 16s steps(8) infinite;
-    }
-
-    .slide_frame_lsj .slide_lsj img {
-        width: 180px;
-        height: 33px;
-        object-fit: contain;
-    }
-
-    @keyframes stepMove_lsj {
-        from {
-            transform: translateX(0);
-        }
-
-        to {
-            transform: translateX(-1440px);
-        }
-    }
 
     /* ABOUT US - TOP */
     .about_top_lsj .bottom_lsj {
