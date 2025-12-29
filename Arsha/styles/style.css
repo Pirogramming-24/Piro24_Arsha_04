@@ -680,13 +680,74 @@
 }
 
 /* CALL TO ACTION */
-.call_to_action_lsj {}
+.call_to_action_lsj {
+    position: relative;
+    padding: 120px 0;
+    color: #fff;
 
-.call_to_action_lsj h3 {}
+    /* ✅ 이게 “스크롤 따라 부분부분 보이는” 핵심 */
+    background-image: url("../images/lsj/call_to_action.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* ✅ */
+}
 
-.call_to_action_lsj p {}
+.call_to_action_lsj::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(55, 81, 126, 0.589);
+}
 
-.call_to_action_lsj a {}
+.call_to_action_lsj .cta_inner {
+    position: relative;
+    z-index: 1;
+
+    width: min(1140px, 92%);
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.call_to_action_lsj .cta_text {
+    max-width: 720px;
+}
+
+.call_to_action_lsj h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0 0 16px;
+}
+
+.call_to_action_lsj p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #e6e6e6;
+}
+
+.call_to_action_lsj .cta_btn {
+    display: inline-block;
+    padding: 12px 40px;
+    border: 2px solid #fff;
+    border-radius: 999px;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.call_to_action_lsj .cta_btn:hover {
+    background: #47B2E4;
+    border-color: #47B2E4;
+}
 
 /* media */
 @media (max-width: 768px) {
