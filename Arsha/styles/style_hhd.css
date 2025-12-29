@@ -562,39 +562,17 @@ body {
 
 /* 불렛 애니메이션 */
 @keyframes bulletActive_hhd {
-  0% { 
-    background-color: rgba(206, 212, 218, 0.6);
-    transform: scale(1);
-  }
-  2% { 
-    background-color: #47b2e4;
-    transform: scale(1.2);
-  }
-  4% { 
-    background-color: #47b2e4;
-    transform: scale(1);
-  }
-  20% { 
-    background-color: #47b2e4;
-    transform: scale(1);
-  }
-  22% { 
-    background-color: #47b2e4;
-    transform: scale(1.2);
-  }
-  24% { 
-    background-color: rgba(206, 212, 218, 0.6);
-    transform: scale(1);
-  }
-  100% { 
-    background-color: rgba(206, 212, 218, 0.6);
-    transform: scale(1);
-  }
+  0%    { background-color: rgba(206, 212, 218, 0.6); transform: scale(1); }
+  1%    { background-color: #47b2e4; transform: scale(1); }  
+  19%   { background-color: #47b2e4; transform: scale(1); }
+  19.5% { background-color: rgba(206, 212, 218, 0.6); transform: scale(1); }
+  100%  { background-color: rgba(206, 212, 218, 0.6); transform: scale(1); }
 }
 
 .bullet-1_hhd {
   animation: bulletActive_hhd 25s infinite;
   animation-delay: 0s;
+  background-color: #47b2e4;
 }
 
 .bullet-2_hhd {
