@@ -69,13 +69,58 @@
 }
 
 .home_lsj .bottom_lsj .videoBtn_lsj {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
     font-size: 16px;
+    font-weight: 600;
     color: #fff;
-    transition: color 0.4s ease;
+    text-decoration: none;
+
+    transition: color 0.3s ease;
 }
 
+/* 원 */
+.home_lsj .bottom_lsj .videoBtn_lsj .playIcon_lsj {
+    width: 34px;
+    height: 34px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+
+    transition: border-color 0.3s ease;
+}
+
+/* ▶ 삼각형 */
+.home_lsj .bottom_lsj .videoBtn_lsj .playIcon_lsj::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-35%, -50%);
+
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 10px solid #fff;
+
+    transition: border-left-color 0.3s ease;
+}
+
+/* 호버: 텍스트 + 원 + 삼각형 모두 파란색 */
 .home_lsj .bottom_lsj .videoBtn_lsj:hover {
     color: #47B2E4;
+}
+
+.home_lsj .bottom_lsj .videoBtn_lsj:hover .playIcon_lsj {
+    border-color: #47B2E4;
+}
+
+.home_lsj .bottom_lsj .videoBtn_lsj:hover .playIcon_lsj::before {
+    border-left-color: #47B2E4;
 }
 
 @keyframes floatY_lsj {
@@ -117,7 +162,6 @@
     padding: 20px 0;
 }
 
-/* 트랙 */
 .slide_frame_lsj .slide_lsj {
     --logo-w: 240px;
     --gap: 20px;
@@ -145,10 +189,9 @@
     transform: scale(1.2);
 }
 
-/* ✅ 8칸(원본 8개) 만큼만 이동하면 복제랑 자연스럽게 이어짐 */
 @keyframes logoOneByOne_lsj {
 
-    /* 0칸(멈춤) */
+    /* 0칸 */
     0%,
     10% {
         transform: translateX(0);
@@ -196,7 +239,7 @@
         transform: translateX(calc(-7 * var(--step)));
     }
 
-    /* 8칸(원본 끝) → 복제 시작과 동일 위치 */
+    /* 8칸 */
     100% {
         transform: translateX(calc(-8 * var(--step)));
     }
