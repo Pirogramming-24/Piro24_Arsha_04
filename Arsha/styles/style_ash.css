@@ -89,7 +89,7 @@ header {
 
 .header-center span{
     font-weight:bold;
-    font-size: 1.1rem;
+    font-size: 16px;
 }
 
 .header-center a:hover{
@@ -154,7 +154,7 @@ header {
 
 .download p{
     color:white;
-    font-size:0.9rem;
+    font-size:12px;
     font-weight:900;
 }
 
@@ -181,8 +181,8 @@ header {
 
 .header-bottom .logo a {
     color: #fff;
-    font-size: 28px;
-    font-weight: 700;
+    font-size: 30px;
+    font-weight: 500;
     text-decoration: none;
     letter-spacing: 1px;
 }
@@ -204,7 +204,7 @@ header {
     color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 400;
     transition: 0.3s;
 }
 
@@ -220,7 +220,7 @@ header {
     color: #fff;
     text-decoration: none;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 400;
     transition: 0.3s;
 }
 
@@ -254,13 +254,15 @@ header {
 }
 
 .footer-newsletter h3{
-    color:#013b6e;
-    font-size: 1.2rem;
-    font-weight: 900;
+    font-family: "Jost", sans-serif;
+    color:#37517E;
+    font-size: 24px;
+    font-weight: 700;
     margin-bottom:20px;
 }
 
 .footer-newsletter p{
+    font-size: 14px;
     margin-bottom: 30px;
     font-style:normal;
 }
@@ -303,8 +305,8 @@ header {
 
 /* footer-top*/
 .footer-top{
+    font-size: 14px;
     padding : 50px 80px;
-    color:gray;
     background-color: white;
 }
 
@@ -327,9 +329,10 @@ header {
 }
 
 .footer-info h3{
-    font-size: 1.6rem;
-    font-weight:900 ;
-    color:#013b6e;
+    font-family: "Jost", sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    color:#37517E;
 }
 
 .footer-top .container ul li{
@@ -337,7 +340,7 @@ header {
 }
 
 .footer-top .container ul li a{
-    color:gray;
+    color: rgb(68, 68, 68, 0.8);
     transition:0.4s ease;
 }
 
@@ -347,9 +350,10 @@ header {
 }
 
 .footer-top .container h4{
-    font-size:1.0rem;
+    font-family: "Jost", sans-serif;
+    font-size: 16px;
     font-weight: 700;
-    color:#013b6e;
+    color:#37517E;
 }
 
 #footer ul {
@@ -415,6 +419,7 @@ header {
 }
 
 .footer-bottom .container .copyright{
+    font-size: 14px;
     justify-content: center;
     margin:9px;
 }
@@ -422,6 +427,10 @@ header {
 .footer-bottom .copyright strong{
     margin:0.6px;
     font-weight: 700 !important;
+}
+
+.credits{
+    font-size: 13px;
 }
 
 .credits a{
@@ -605,7 +614,8 @@ header {
 }
 
 .info-item .content h4 {
-    font-size: 20px;
+    font-family: "Jost", sans-serif;
+    font-size: 18px;
     font-weight: 700;
     color: #37517e;
     margin: 0;
@@ -613,7 +623,6 @@ header {
 
 .info-item .content p {
     font-size: 14px;
-    color: #6182ba;
     margin: 5px 0 0 0;
 }
 
@@ -640,7 +649,7 @@ header {
 .form-group label {
     display: block;
     margin-bottom: 8px;
-    font-size: 14px;
+    font-size: 16px;
     color: #444;
 }
 

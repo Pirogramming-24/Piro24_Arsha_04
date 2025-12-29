@@ -41,7 +41,7 @@ body {
 }
 
 .pageTitle_kkw {
-    font-size: 1.8rem;
+    font-size: 28px;
     font-weight: 700;
     color: #37517e;
     margin-top: 17px;
@@ -214,8 +214,8 @@ body {
 }
 
 .descriptionText_kkw {
-    font-size: 0.9rem;
-    color: #666;
+    font-size: 16px;
+    color: rgb(68, 68, 68, 0.7);
     line-height: 1.7;
 }
 

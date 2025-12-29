@@ -98,8 +98,8 @@ html {
 
 body {
     line-height: 1.5;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans KR", Arial, sans-serif;
-    color: #111;
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    color: #444444;
 }
 
 ol,
@@ -143,7 +143,11 @@ table {
 }
 
 h1,
-h2,
+h2 {
+    font-family: "Jost", sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
 h3,
 h4,
 h5,

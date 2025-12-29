@@ -39,8 +39,6 @@
 
 .faq_jh>p {
     text-align: center;
-    font-size: 0.95rem;
-    color: #606060;
     margin-bottom: 55px;
     margin-top: 20px;
     line-height: 1.5;
@@ -56,13 +54,14 @@
 }
 
 .faq_jh summary {
+    font-family: "Jost", sans-serif;
     list-style: none;
     cursor: pointer;
     padding: 20px 25px;
     display: flex;
     align-items: center;
-    font-size: 1.05rem;
-    font-weight: 700;
+    font-size: 18px;
+    font-weight: 600;
     color: #37517e;
     position: relative;
 }
@@ -138,7 +137,7 @@
 }
 
 .suscribe_jh .content_jh h1 {
-    font-size: 3.2rem;
+    font-size: 40px;
     font-weight: 800;
     color: #37517e;
     margin-bottom: 24px;
@@ -148,9 +147,6 @@
 }
 
 .suscribe_jh .content_jh p {
-    font-size: 1.1rem;
-    color: #555;
-    line-height: 1.7;
     margin: 0 0 28px;
     max-width: 650px;
 }
@@ -170,7 +166,7 @@
     border: 0;
     background: transparent;
     padding: 16px 22px;
-    font-size: 1.05rem;
+    font-size: 16px;
     color: #444;
 }
 
@@ -183,7 +179,7 @@
     padding: 0 34px;
     background: #47b2e4;
     color: #fff;
-    font-size: 1.05rem;
+    font-size: 16px;
     font-weight: 700;
     cursor: pointer;
     white-space: nowrap;
@@ -247,11 +243,8 @@
 
 .rbp_jh .content_jh p {
     text-align: center;
-    font-size: 0.95rem;
-    color: #606060;
     margin-bottom: 55px;
     margin-top: 20px;
-    line-height: 1.5;
 }
 
 .cards_jh {
@@ -297,8 +290,8 @@
     right: 0px;
     background: #47b2e4;
     color: #fff;
-    font-size: 0.75rem;
-    font-weight: 700;
+    font-size: 16px;
+    font-weight: 600;
     padding: 6px 12px;
 }
 
@@ -308,16 +301,15 @@
 }
 
 .card_jh .body_jh h2 {
-    font-size: 1.1rem;
+    font-size: 20px;
     font-weight: 700;
     color: #37517e;
-    line-height: 1.4;
 }
 
 .meta_jh {
     padding: 0 25px;
-    font-size: 0.85rem;
-    color: #777;
+    font-size: 15px;
+    color: rgb(68, 68, 68, 0.5);
     display: flex;
     align-items: center;
     gap: 8px;
@@ -337,9 +329,10 @@
 
 .card_jh .more {
     padding: 20px 25px 25px;
-    font-size: 0.9rem;
+    font-size: 15px;
     font-weight: 600;
-    color: #606060;
+    color: rgb(68, 68, 68, 0.6);
+    line-height: 1;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
