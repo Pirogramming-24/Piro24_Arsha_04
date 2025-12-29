@@ -357,24 +357,107 @@
 
 
 /* ABOUT US - BOTTOM */
-.about_bottom_lsj {}
+.about_bottom_lsj {
+    padding: 60px 0;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding-left: 12px;
+    padding-right: 12px;
 
-.about_bottom_lsj .left_lsj {}
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
 
-.about_bottom_lsj .left_lsj img {}
+.about_bottom_lsj .left_lsj,
+.about_bottom_lsj .right_lsj {
+    flex: 0 0 50%;
+}
 
-.about_bottom_lsj .right_lsj {}
+.about_bottom_lsj .left_lsj {
+    display: flex;
+    justify-content: center;
+}
 
-.about_bottom_lsj .right_lsj h3 {}
+.about_bottom_lsj .left_lsj img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
 
-.about_bottom_lsj .right_lsj p {}
+.about_bottom_lsj .right_lsj h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #37517E;
+    margin: 0 0 10px;
+    line-height: 1.2;
+}
 
-.about_bottom_lsj .right_lsj .progress_lsj {}
+.about_bottom_lsj .right_lsj>p {
+    margin: 0 0 16px;
+    color: #6c757d;
+    line-height: 1.7;
+    font-size: 16px;
+}
 
-.about_bottom_lsj .right_lsj .box_lsj {}
+.about_bottom_lsj .progress_lsj {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
 
-.about_bottom_lsj .right_lsj .box_lsj span {}
+.about_bottom_lsj .progress_lsj .box_lsj {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
+    position: relative;
+    padding-bottom: 12px;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.about_bottom_lsj .progress_lsj .box_lsj::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 10px;
+    background: #e8edf5;
+    border-radius: 2px;
+}
+
+.about_bottom_lsj .progress_lsj .box_lsj::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    height: 10px;
+    background: #37517E;
+    border-radius: 2px;
+    width: 0;
+    /* 기본값 */
+}
+
+.about_bottom_lsj .progress_lsj .box_lsj:nth-child(1)::after {
+    width: 100%;
+}
+
+.about_bottom_lsj .progress_lsj .box_lsj:nth-child(2)::after {
+    width: 90%;
+}
+
+.about_bottom_lsj .progress_lsj .box_lsj:nth-child(3)::after {
+    width: 75%;
+}
+
+.about_bottom_lsj .progress_lsj .box_lsj:nth-child(4)::after {
+    width: 55%;
+}
 
 /* SERVICES */
 .service_lsj {}
@@ -486,6 +569,12 @@
         flex-direction: column-reverse;
         gap: 10px;
     }
+
+    /* ABOUT US - BOTTOM */
+    .about_bottom_lsj {
+        flex-direction: column;
+        gap: 40px;
+    }
 }
 
 @media (max-width: 380px) {
@@ -532,5 +621,8 @@
     /* 구현 없음 */
 
     /* ABOUT US - MIDDLE */
+    /* 구현 없음 */
+
+    /* ABOUT US - BOTTOM */
     /* 구현 없음 */
 }
